@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- if not (.Site.Params.homepage.disableHeroSection) }}
-<section class="hero" style="background-image:linear-gradient(rgba(20,30,38, 0.9), rgba(24,44,54, 0.8)),
+<section class="hero" style="background-image:linear-gradient(rgba(20,30,38, 0.3), rgba(24,44,54, 0.2)),
 url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
   <header class="container">
     <hgroup>
@@ -9,18 +9,10 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
       <h2>{{.Site.Params.homepage.heroDescription}}</h2>
     </hgroup>
     <div>
-      <a
-        class="hero-buttons"
-        href="{{ .Site.Params.homepage.heroCTAPrimaryUrl | relURL  }}"
-        role="button"
-        >{{.Site.Params.homepage.heroCTAPrimaryText}}</a
-      >
-      <a
-        href="{{ .Site.Params.homepage.heroCTASecondaryUrl | relURL  }}"
-        role="button"
-        class="contrast outline"
-        >{{.Site.Params.homepage.heroCTASecondaryText}}</a
-      >
+      <a class="hero-buttons" href="{{ .Site.Params.homepage.heroCTAPrimaryUrl | relURL  }}"
+        role="button">{{.Site.Params.homepage.heroCTAPrimaryText}}</a>
+      <a href="{{ .Site.Params.homepage.heroCTASecondaryUrl | relURL  }}" role="button"
+        class="contrast outline">{{.Site.Params.homepage.heroCTASecondaryText}}</a>
     </div>
   </header>
 </section>
@@ -35,18 +27,13 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
   </hgroup>
   <div class="container">
     <div class="grid grid-post">
-      {{ $paginator := .Paginate (where site.RegularPages  "Type" "in" site.Params.mainSections | first
+      {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections | first
       3) }} {{ range $paginator.Pages }}
       <a href="{{ .RelPermalink }}">
         <article class="text-center">
-        {{if .Params.Cover.Image}}
+          {{if .Params.Cover.Image}}
           <figure>
-            <img
-              src="{{.Params.Cover.Image | absURL}}"
-              width="600"
-              height="400"
-              layout="responsive"
-            ></img>
+            <img src="{{.Params.Cover.Image | absURL}}" width="600" height="400" layout="responsive"></img>
             {{ end }}
           </figure>
           <hgroup>
@@ -64,10 +51,38 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
     </div>
   </div>
   <div class="text-center">
-  <a href="{{ "/blog" | absLangURL }}"><kbd>{{.Site.Params.homepage.seeMoreText}}</kbd></a>
-</div>
+    <a href="{{ " /blog" | absLangURL }}"><kbd>{{.Site.Params.homepage.seeMoreText}}</kbd></a>
+  </div>
 </section>
 {{ end }}
+
+{{- if not (.Site.Params.homepage.disableTodoSection) }}
+<section>
+  <hgroup class="text-center">
+    <h2>{{.Site.Params.homepage.todoTitle}}</h2>
+    <h3>{{.Site.Params.homepage.todoDescription}}</h3>
+  </hgroup>
+  <div class="container">
+    <div class="grid">
+      <div class="container" style="text-align: right;">
+        <ul>
+          {{range .Site.Params.homepage.todoContentLeft}}
+          <li>{{.}}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="container">
+        <ul>
+          {{range .Site.Params.homepage.todoContentRight}}
+          <li>{{.}}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 
 {{- if not (.Site.Params.homepage.disableAboutSection) }}
 <section>
@@ -78,13 +93,8 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
   <div class="container">
     <div class="grid">
       <div class="container" style="text-align: right;">
-        <img
-          src=" {{.Site.Params.homepage.aboutImgUrl}}"
-          alt="{{.Site.Params.author}}"
-          width="300"
-          height="450"
-          layout="intrinsic"
-        ></img>
+        <img src=" {{.Site.Params.homepage.aboutImgUrl}}" alt="{{.Site.Params.aboutName}}" width="300" height="450"
+          layout="intrinsic"></img>
       </div>
       <div class="container">
         {{.Site.Params.homepage.aboutContent}}
@@ -104,14 +114,8 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
     <div class="grid grid-post">
       {{ range .Site.Params.homepage.portfolio }}
       <a class="portfolio-post" href="{{.websiteUrl}}">
-        <figure >
-          <img
-            src="{{.imageUrl}}"
-            width="600"
-            height="400"
-            layout="responsive"
-            alt="{{.alt}}"
-          ></img>
+        <figure>
+          <img src="{{.imageUrl}}" width="600" height="400" layout="responsive" alt="{{.alt}}"></img>
         </figure>
         <hgroup class="text-center">
           <h4>{{.description}}</h4>
