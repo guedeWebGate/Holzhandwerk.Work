@@ -80,10 +80,6 @@ params:
       alt: # image alt for better SEO
       description: Sanierung Treppe
       websiteUrl: #
-    - imageUrl: /uploads/portfolio-3.webp
-      alt: # image alt for better SEO
-      description: Portfolio Three.
-      websiteUrl: #
   # Search Options (https://fusejs.io/)
   fuseOpts:
     isCaseSensitive: false
