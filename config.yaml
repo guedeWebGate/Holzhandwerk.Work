@@ -48,9 +48,7 @@ params:
     disableHeroSection: false
     heroUpperTitle: 
     heroTitle: Simon Gantenbein - Ihr Schreiner
-    heroDescription: |
-      Seit Kindertagen liebe ich es mit Holz zuarbeiten und verschiedene Dinge wie Holzschwerte oder Bumerange zu bauen. In der Oberstufe beispielsweise habe ich versucht ein Pult selbst zubauen. Das Holz bezog ich in der Schreinerei aus dem Dorf. In derselben ich später meine Ausbildung als Schreiner EFZ absolvierte und weitere Jahre arbeitete. 
-      Neben meiner Tätigkeit als Pastor mit Schwerpunkt Jugend in der FEG Effretikon arbeite ich nun selbständig als Schreiner. Gerne stehe ich Ihnen für unterschiedliche Dienste zur Verfügung.
+    heroDescription: ... mit Leidenschaft für Holz
     heroCTAPrimaryText: Projekte
     heroCTAPrimaryUrl: "/projekte/"
     heroCTASecondaryText: Kontaktiere Mich
@@ -61,12 +59,28 @@ params:
     blogTitle: Latest Posts
     blogDescription: This is my latest blog posts
     seeMoreText: More Posts
+    # TodoSection
+    disabelTodoSection: false
+    todoTitle: Tätigkeiten
+    todoDescription: ... Ich habe eine Leidenschaft für alle mit Holz
+    todoImgUrl: /pictures/Kiste.png
+    todoImgHeight: "250"
+    todoImgWidth: "250"
+    todoContentLeft:
+    - Kleine Reparaturen (Schrank reparieren, Möbel neu zusammenleimen)
+    - Aufbereitungsarbeiten (Tisch abschleifen und neu ölen)
+    todoContentRight:
+    - Kleinere Möbel nach Mass
+    - Hausarbeiten (Geländer anbringen, Möbel aufhängen oder zusammensetzen)
+    - Grössere Projekte auf Anfrage (Treppe erneuern)
     # About Section    
     disableAboutSection: false
-    aboutTitle: Tätigkeiten
-    aboutDescription: Das kann ich gut
-    aboutImgUrl: "/uploads/self.webp"
-    aboutContent: Hi guys. This is where you put something about yourself.
+    aboutTitle: Über Mich
+    aboutDescription: ... und warum ich so Begeistert von Holz bin
+    aboutImgUrl: "/pictures/Simon.webp"
+    aboutContent: |
+      Seit Kindertagen liebe ich es mit Holz zuarbeiten und verschiedene Dinge wie Holzschwerte oder Bumerange zu bauen. In der Oberstufe beispielsweise habe ich versucht ein Pult selbst zubauen. Das Holz bezog ich in der Schreinerei aus dem Dorf. In derselben ich später meine Ausbildung als Schreiner EFZ absolvierte und weitere Jahre arbeitete. 
+      Neben meiner Tätigkeit als Pastor mit Schwerpunkt Jugend in der FEG Effretikon arbeite ich nun selbständig als Schreiner. Gerne stehe ich Ihnen für unterschiedliche Dienste zur Verfügung.
     # Portfolio Section
     disablePortfolioSection: false
     portfolioTitle: Projekte
