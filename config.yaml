@@ -76,9 +76,9 @@ params:
       alt: # image alt for better SEO
       description: Eine neue Schaukel.
       websiteUrl: #
-    - imageUrl: /uploads/portfolio-2.webp
+    - imageUrl: /pictures/Treppe.png
       alt: # image alt for better SEO
-      description: Sanierung Treppe.
+      description: Sanierung Treppe
       websiteUrl: #
     - imageUrl: /uploads/portfolio-3.webp
       alt: # image alt for better SEO
