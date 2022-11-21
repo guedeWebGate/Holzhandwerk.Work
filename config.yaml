@@ -1,7 +1,7 @@
 baseURL: 'https://holzhandwerk.work'
 languageCode: 'en-us'
 title: 'Holzhandwerk Gantenbein'
-theme: 'piko-advanced'
+theme: 'pikoAdv'
 params:
   analytics:
     google:
